@@ -90,6 +90,6 @@ CREATE TABLE students (
 
 Developed by [Supreeth]  
 📧 [gollapallisupreeth@gmail.com]  
-🔗 [https://www.linkedin.com/in/gpllapally-supreeth]
+🔗 [https://www.linkedin.com/in/gollapally-supreeth]
 
 ---
