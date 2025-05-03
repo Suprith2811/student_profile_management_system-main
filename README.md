@@ -1,18 +1,19 @@
-# 🧑‍🎓 Student Management System
+#  Student Management System
 
 A desktop-based Student Management System built using **Python Tkinter** for the GUI and **MySQL** for backend database operations. This application helps manage student records efficiently by allowing users to add, update, delete, and search student information.
 
 ---
 
-## 📌 Features
+##  Features
 
-- ✅ Add New Student Records  
-- ✏️ Update Student Details  
-- 🗑️ Delete Student Entries  
-- 🔍 Search by Student ID, Name, Course  
-- 📋 View All Records in a Scrollable Table  
-- 🖥️ User-friendly GUI (Tkinter)  
-- 💾 Data persistence using MySQL  
+-  Add New Student Records  
+-  Update Student Details  
+-  Delete Student Entries  
+-  Search by Student ID, Name, Course  
+-  View All Records in a Scrollable Table  
+-  User-friendly GUI (Tkinter)  
+-  Data persistence using MySQL
+-  Export Data into excel Sheets 
 
 ---
 
@@ -30,6 +31,8 @@ A desktop-based Student Management System built using **Python Tkinter** for the
 - Python 3.x  
 - MySQL Server  
 - `mysql-connector-python` (Install using: `pip install mysql-connector-python`)
+- `Pillow==10.2.0` (Install using: `pip install Pillow`)
+- `PyMySQL==1.1.0` (Install using: `pip install PyMySql`)
 
 ---
 
@@ -37,17 +40,31 @@ A desktop-based Student Management System built using **Python Tkinter** for the
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/student-management-system.git
+   git clone https://github.com/suprith2811/student-management-system.git
    cd student-management-system
    ```
 
 2. **Set Up the MySQL Database**
    - Open MySQL Workbench or any MySQL client.
-   - Run the SQL script `setup.sql` provided in the repo to create the database and table.
+   - create this Structure
+CREATE DATABASE student_db;
+USE student_db;
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    dob DATE,
+    gender VARCHAR(10),
+    email VARCHAR(100),
+    phone VARCHAR(15),
+    address TEXT,
+    photo_path VARCHAR(255)
+);
+
+
 
 3. **Update Database Configuration**
-   - Open the main Python script (e.g., `main.py` or `student_app.py`).
-   - Find the section with MySQL credentials:
+   - Open the main Python script.
+   - Find the section with Mysql credentials:
      ```python
      mydb = mysql.connector.connect(
          host="localhost",
@@ -65,40 +82,14 @@ A desktop-based Student Management System built using **Python Tkinter** for the
 
 ---
 
-## 🖼️ Screenshots
 
-> _Include screenshots of the GUI here (e.g., Add Student Form, Search Panel, Records Table)_
-
-![Home Screen](screenshots/home.png)
-![Add Student](screenshots/add_student.png)
-![Search Student](screenshots/search.png)
-
----
-
-## 📁 Project Structure
-
-```
-student-management-system/
-├── main.py
-├── db_config.py
-├── setup.sql
-├── README.md
-└── screenshots/
-    ├── home.png
-    ├── add_student.png
-    └── search.png
-```
 
 ---
 
 ## 🙋‍♂️ Author
 
-Developed by [Your Name]  
-📧 [your.email@example.com]  
-🔗 [LinkedIn/GitHub profile link]
+Developed by [Supreeth]  
+📧 [gollapallisupreeth@gmail.com]  
+🔗 [https://www.linkedin.com/in/gpllapally-supreeth]
 
 ---
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
